@@ -4,49 +4,21 @@
 
 {% block content %}
 
-    <!----------------------------- Main Site Section ------------------------------>
 
     <main>
 
-        <!------------------------ Site Title ---------------------->
 
         <section class="site-title">
             <div class="site-background" data-aos="fade-up" data-aos-delay="100">
                 <h3>Orhan Markaloğlu</h3>
-                <h1>Web Tasarım Dersi Vize Ödevi</h1>
-                <button class="btn">Explore</button>
+                <h1>Web Tabanlı Programlama ve Tasarım Dersi Vize Ödevi</h1>
+                
+                <a href="https://github.com/orhanmarkal/odev" >
+                    <button class="btn">GitHub Ödev Linki</button>
+                     </a>
             </div>
+
         </section>
-
-        <!------------x----------- Site Title ----------x----------->
-
-        <!-- --------------------- Blog Carousel ----------------- -->
-        <!-- 
-        <section>
-            <div class="blog">
-                <div class="container">
-                    <div class="owl-carousel owl-theme blog-post">
-                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                            <img src="./assets/Blog-post/post-1.jpg" alt="post-1">
-                            <div class="blog-title">
-                                <h3>London Fashion week's continued the evolution</h3>
-                                <button class="btn btn-blog">Fashion</button>
-                                <span>2 minutes</span>
-                            </div>
-                        </div>
-               
-                    </div>
-                    <div class="owl-navigation">
-                        <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
-                        <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- ----------x---------- Blog Carousel --------x-------- -->
-
-        <!-- ---------------------- Site Content -------------------------->
 
         <br><br><br>
         <section class="container">
@@ -72,7 +44,7 @@
                             <a href="#">{{post.title}}</a>
                             <p>{{post.content|truncatechars:50}}
                             </p>
-                            <a href="{{post.get_absolute_url}}" class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></a>
+                            <a href="{{post.get_absolute_url}}" class="btn post-btn">Devamını Oku.. &nbsp; <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <hr>
@@ -120,7 +92,7 @@
                         </ul>
                     </div>
                     <div class="popular-post">
-                        <h2>Popular Post</h2>
+                        <h2>Popüler Postlar</h2>
                         {% for item in popular_list %}
                         <div class="post-content" data-aos="flip-up" data-aos-delay="200">
                             <div class="post-image">
@@ -133,7 +105,6 @@
                                 </div>
                                 <div class="post-info flex-row">
                                     <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;{{item.publishing_date}}</span>
-                                    <!-- <span>2 Commets</span> -->
                                 </div>
                             </div>
                             <div class="post-title">
@@ -142,36 +113,11 @@
                         </div>
                         {% endfor %}
                     </div>
-                    
-                    <!-- <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
-                        <h2>Newsletter</h2>
-                        <div class="form-element">
-                            <input type="text" class="input-element" placeholder="Email">
-                            <button class="btn form-btn">Subscribe</button>
-                        </div>
-                    </div>
-                    <div class="popular-tags">
-                        <h2>Popular Tags</h2>
-                        <div class="tags flex-row">
-                            <span class="tag" data-aos="flip-up" data-aos-delay="100">Software</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="200">technology</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="300">travel</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="400">illustration</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="500">design</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="600">lifestyle</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="700">love</span>
-                            <span class="tag" data-aos="flip-up" data-aos-delay="800">project</span>
-                        </div>
-                    </div> -->
                 </aside>
             </div>
         </section>
 
-        <!-- -----------x---------- Site Content -------------x------------>
 
     </main>
-
-    <!---------------x------------- Main Site Section ---------------x-------------->
-
 
  {% endblock %}

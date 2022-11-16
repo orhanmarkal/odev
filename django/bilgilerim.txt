@@ -6,3 +6,6 @@ admin giriş :
 
 orhanmarkal
 şifre : 1
+
+admin
+şifre : 1

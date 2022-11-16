@@ -14,7 +14,6 @@ CATEGORY = (
 class Category(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, default="")
-    #status = models.CharField(choices=CATEGORY,max_length=10,default=DEFAULT)
     image = models.ImageField(null=True, blank=True, upload_to="category")
 
     def __str__(self):

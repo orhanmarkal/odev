@@ -18,7 +18,7 @@ def index(request):
             Q(title__icontains=query) | Q(content__icontains=query) | Q(user__first_name__icontains=query)
         ).distinct()
         
-    paginator = Paginator(post_list, 3) # bir sayfada kaç tane görünmesi gerek
+    paginator = Paginator(post_list, 3) # bir sayfada görünecek post sayısı
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)
@@ -62,7 +62,7 @@ def post_detail(request, slug):
 
 
 def add_comment_to_post(request, pk):
-    post = Pos.get_object_or_404(Post, pk=pk)
+    post = Post.get_object_or_404(Post, pk=pk)
 
     if request.POST == "POST":
         form  = CommentForm(request.POST)
